@@ -14,7 +14,6 @@
     - [Objetivo](#objetivo)
     - [Metodología](#metodología)
     - [Resultados Tarea 1](#resultados-tarea-1)
-  - [|  |  |](#----)
   - [Tarea 2: Clasificación de Microplásticos](#tarea-2-clasificación-de-microplásticos)
     - [Objetivo](#objetivo-1)
     - [Metodología](#metodología-1)
