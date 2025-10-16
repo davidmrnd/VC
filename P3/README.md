@@ -18,7 +18,6 @@
     - [Objetivo](#objetivo-1)
     - [Metodología](#metodología-1)
     - [Resultados Tarea 2](#resultados-tarea-2)
-  - [](#)
   - [Requisitos](#requisitos)
   - [Ejecución](#ejecución)
 
@@ -124,7 +123,7 @@ pip install scikit-learn
 
 ## Ejecución
 
-1.  Asegúrate de tener todos los archivos de imagen (`monedas_no_ideal.png`, `MPs_test.jpg`) en el mismo directorio que el notebook.
+1.  Asegúrate de tener todos los archivos de imagen (fotos de monedas, `MPs_test.jpg`...) en el mismo directorio que el notebook.
 2.  Abre el archivo `VC_P3.ipynb` en un entorno de Jupyter Notebook o JupyterLab.
 3.  Ejecuta las celdas en orden.
 4.  Para la Tarea 1, se abrirá una ventana de OpenCV. Haz clic en una moneda de 1 Euro y presiona cualquier tecla para continuar.
