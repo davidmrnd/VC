@@ -19,7 +19,6 @@
     - [Objetivo](#objetivo-1)
     - [Metodología](#metodología-1)
     - [Resultados Tarea 2](#resultados-tarea-2)
-  - [](#)
   - [Requisitos](#requisitos)
   - [Ejecución](#ejecución)
 
@@ -100,16 +99,36 @@ El enfoque para este problema es el siguiente:
 
 3.  **Clasificación Heurística (Basada en Reglas):**
 
-      * Se define un conjunto de reglas simples (un árbol de decisión con `if/elif/else`) para asignar una clase a cada partícula según sus características:
-          * Si la **circularidad es muy alta** (`> 0.85`), se clasifica como **PEL** (verde).
-          * Si no, si la **intensidad es baja** (oscura, `< 125`) y su **relación de aspecto es cercana a 1** (`> 0.9`), se clasifica como **TAR** (rojo).
-          * Cualquier otra partícula se clasifica como **FRA** (azul).
+      * Para evaluar la precisión del clasificador, se compararon las predicciones heurísticas (y_pred) con las etiquetas reales (y_true) extraídas de un CSV que contiene las coordenadas de los bounding boxes y la clase correcta de cada partícula.
+      * Cada contorno detectado se asoció con su etiqueta real mediante la ubicación del centro del contorno dentro del rectángulo correspondiente en el CSV.
+      * Se utilizó sklearn.metrics.confusion_matrix para generar la matriz de confusión, y ConfusionMatrixDisplay para visualizarla.
+
+4. **Matriz de Confusión:**
+
+   * Para evaluar la precisión del clasificador, se compararon las predicciones heurísticas (`y_pred`) con las etiquetas reales (`y_true`) extraídas de un CSV que contiene las coordenadas de los bounding boxes y la clase correcta de cada partícula.
+   * Cada contorno detectado se asoció con su etiqueta real mediante la ubicación del centro del contorno dentro del rectángulo correspondiente en el CSV.
+   * Se utilizó `sklearn.metrics.confusion_matrix` para generar la matriz de confusión, y `ConfusionMatrixDisplay` para visualizarla. 
 
 ### Resultados Tarea 2
 
 El clasificador logra etiquetar con éxito una gran cantidad de partículas, mostrando cómo las características geométricas y de apariencia pueden ser muy efectivas para problemas de clasificación simples.
 
 ![alt text](resultados_img/particulas_resultado.png)
+
+La matriz de confusión obtenida con el clasificador heurístico es la siguiente:
+
+![alt text](resultados_img/matriz_confusion.png)
+
+Interpretación:
+
+* **PEL:** 17 correctamente clasificados, 16 confundidos con FRA.
+* **TAR:** 8 correctamente clasificados, 1 confundido con PEL y 6 con FRA.
+* **FRA:** 50 correctamente clasificados, 2 confundidos con PEL.
+
+Esto muestra que el clasificador identifica bien los fragmentos (FRA), mientras que PEL y TAR presentan cierta confusión, especialmente con FRA.
+
+En general, estas reglas heurísticas permiten un análisis rápido y comprensible de las partículas de microplásticos, y la matriz de confusión proporciona un método cuantitativo para evaluar su rendimiento.
+
 -----
 
 ## Requisitos
