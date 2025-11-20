@@ -1,4 +1,3 @@
-Tienes razón. La interfaz de chat lo está renderizando.
 # Practica 5
 
 # Clasificación de Rangos de Edad con PCA + KNN y Webcam
