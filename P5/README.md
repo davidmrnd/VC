@@ -2,7 +2,7 @@
 
 # Clasificación de Rangos de Edad con PCA + KNN y Webcam
 
-### Enlace al dataset: https://www.kaggle.com/datasets/frabbisw/facial-age
+### [Enlace al dataset](https://www.kaggle.com/datasets/frabbisw/facial-age)
 
 Este proyecto utiliza técnicas de visión por computador y machine learning para clasificar el rango de edad de una persona en tiempo real utilizando una cámara web. El pipeline de clasificación se basa en la Reducción de Dimensión con **PCA (Análisis de Componentes Principales)** y un clasificador **KNN (K-Vecinos más Cercanos)**.
 
